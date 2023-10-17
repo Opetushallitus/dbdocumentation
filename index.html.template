@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Opintopolun tietokannat</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+    <style>
+      body {
+        text-align: center;
+      }
+      h1 {
+        font-family: 'Roboto', sans-serif;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      table {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      th, td {
+        padding: 5px;
+        font-family: 'Raleway', sans-serif;
+      }
+      .rightcell {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Opintopolun Postgresql-tietokantojen dokumentaatiot ja kuvat</h1>
+    <table>
+        <tr>
+            <th>Tietokanta</th>
+            <th>Dokumentaation generointiaika (UTC)</th>
+        </tr>
+#foreach ($database in $generated_docs_list)        
+        <tr>
+            <td><a href="/${database.name}/index.html" target="_blank">$database.name</a></td>
+            <td class=rightcell>$database.generation_time</a></td>
+        </tr>
+#end
+            </table>
+  </body>
+</html>

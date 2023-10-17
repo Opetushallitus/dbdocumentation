@@ -1,0 +1,7 @@
+{
+  "databases": {
+    "viestinta": {
+      "schemas": ["public", "kirjeet"]
+    }
+  }
+}
