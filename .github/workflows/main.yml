@@ -1,6 +1,7 @@
 name: Build and upload custom dbdocumentation image
 
 on:
+  workflow_dispatch:
   push:
 
 permissions:
